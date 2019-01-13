@@ -4,7 +4,8 @@
 # First, run the upgrade script
 csgo-update.sh
 
-# update the configuration files
+# update the addons and configuration files
+rsync -avh /home/steam/csgo-addons/ /home/steam/csgo-dedicated/csgo/
 rsync -avh /home/steam/csgo-files/ /home/steam/csgo-dedicated/csgo/
 
 # start the dedicated server

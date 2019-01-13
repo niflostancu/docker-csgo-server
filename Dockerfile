@@ -26,7 +26,8 @@ EXPOSE 27015 27020 27005 51840
 
 ADD scripts/ /usr/local/bin
 RUN /usr/local/bin/csgo-addons.sh
-CMD /usr/local/bin/csgo-run.sh
 
 ADD csgo/ /home/steam/csgo-files/ 
+
+CMD /usr/local/bin/csgo-run.sh
 

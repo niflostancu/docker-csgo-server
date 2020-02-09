@@ -166,7 +166,7 @@ Template Hard
 End
 
 Template Tough
-	Skill = 60
+	Skill = 50
 	Rank = 1100
 	Aggression = 45
 	ReactionTime = 0.50
@@ -181,7 +181,7 @@ Template Tough
 End
 
 Template Normal
-	Skill = 50
+	Skill = 40
 	Rank = 1000
 	Aggression = 30
 	ReactionTime = 0.60
@@ -225,114 +225,98 @@ Template Easy
 End
 
 //----------------------------------------------------------------------------
-//
-// These are the individual bot profiles, which inherit first from 
-// Default and then the specified Template(s), in order
-//
 
-
-Elite+Rifle Cliffe
+Elite+Power Surpateanu
 	Skin = 1
-	VoicePitch = 95
-End
-
-Elite+Spray Minh
-	Skin = 2
-	VoicePitch = 105
-End
-
-Elite+Shotgun Crusher
-	Skin = 4
-	VoicePitch = 84
-End
-
-Elite+Punch Garret
-	Skin = 4
 	VoicePitch = 110
 End
 
-Elite+Power Rock
-	Skin = 2
-	VoicePitch = 80
-End
-
-Elite+PunchT Shark
+Elite+RifleT Cristiana
 	Skin = 4
-	VoicePitch = 90
+	VoicePitch = 100
 End
 
-Elite+Rifle Wolf
-	Skin = 2
-	VoicePitch = 98
-End
-
-Elite+RifleT Gunner
+VeryHard+Rifle Tapus
 	Skin = 1
-	VoicePitch = 96
+	VoicePitch = 100
 End
 
-Elite+Sniper Vitaliy
-	Skin = 3
+Elite+PunchT Brazilianu
+	Skin = 1
 	VoicePitch = 105
 End
 
-Elite+Punch Ridgway
-	Skin = 3
-	VoicePitch = 115
-End
-
-Elite+RifleT Steel
-	Skin = 1
-	VoicePitch = 84
-End
-
-Elite+PunchT Stone
+Elite+Rifle "Piticul Porno"
 	Skin = 4
-	VoicePitch = 86
+	VoicePitch = 84
 End
 
 
 //----------------------------------------
 
-Expert+RifleT Arnold
-	VoicePitch = 85
-End
-
-Expert+Rifle Brett
-	VoicePitch = 100
-End
-
-Expert+Punch Kurt
+Expert+Rifle "Dani Mocanu"
+	Skin = 1
 	VoicePitch = 95
 End
 
-Expert+Sniper Kyle
-	Cost = 5
-	VoicePitch = 115
+Expert+Spray "Zana Zanelor"
+	Skin = 4
+	VoicePitch = 102
 End
 
-Expert+Shotgun Moe
-	VoicePitch = 87
+Expert+Sniper Vulturu
+	Skin = 3
+	VoicePitch = 93
 End
 
-Expert+Rifle Quade
-	VoicePitch = 91
+Expert+Rifle "Eddy T4l3nt"
+	Skin = 2
+	VoicePitch = 78
 End
 
-Expert+Rifle Quintin
-	VoicePitch = 101
+Expert "Tzigan"
+	Skin = 2
+	VoicePitch = 77
 End
 
-Expert Ringo
-	VoicePitch = 112
+Expert+Shotgun "Fero Magneticul"
+	Skin = 1
+	VoicePitch = 98
 End
 
-Expert+PunchT Rip
-	VoicePitch = 99
+Expert+RifleT Armani
+	Skin = 2
+	VoicePitch = 96
 End
 
-Expert+Rifle Zach
-	VoicePitch = 100
+Expert+Punch "Printu din Dubai"
+	Skin = 4
+	VoicePitch = 103
+End
+
+Expert+Rifle "Sofer BMW"
+	Skin = 2
+	VoicePitch = 97
+End
+
+Expert+PunchT "Ai Luat Speish"
+	Skin = 1
+	VoicePitch = 90
+End
+
+Expert+Rifle "Alex Belea"
+	Skin = 2
+	VoicePitch = 98
+End
+
+Expert+Sniper "Lutza Agresorul"
+	Skin = 3
+	VoicePitch = 110
+End
+
+Expert+Spray "Dragnea"
+	Skin = 4
+	VoicePitch = 103
 End
 
 //----------------------------------------
@@ -362,13 +346,12 @@ VeryHard+RifleT Cristiana
 	VoicePitch = 100
 End
 
-
-//----------------------------------------
-
-Hard+Rifle Tapus
+VeryHard+Rifle Tapus
 	Skin = 1
 	VoicePitch = 100
 End
+
+//----------------------------------------
 
 Hard+Rifle "Dani Mocanu"
 	Skin = 1
@@ -489,218 +472,155 @@ End
 
 //----------------------------------------
 
-Normal+Rifle Adam
+Normal+Power Surpateanu
 	Skin = 1
-	VoicePitch = 105
+	VoicePitch = 110
 End
 
-Normal+PunchT Andy
-	Skin = 2
-	VoicePitch = 90
-End
-
-Normal Chris
+Normal+Sniper Vulturu
 	Skin = 3
+	VoicePitch = 93
+End
+
+Normal+Rifle "Eddy T4l3nt"
+	Skin = 2
+	VoicePitch = 78
+End
+
+Normal "Tzigan"
+	Skin = 2
+	VoicePitch = 77
+End
+
+Normal+RifleT Cristiana
+	Skin = 4
 	VoicePitch = 100
 End
 
-Normal Colin
-	Skin = 4
-	VoicePitch = 107
-End
-
-Normal+Rifle Dennis
+Normal+Rifle Tapus
 	Skin = 1
-	VoicePitch = 104
-End
-
-Normal Doug
-	Skin = 2
-	VoicePitch = 110
-End
-
-Normal+Sniper Duffy
-	Skin = 2
-	VoicePitch = 110
-End
-
-Normal Gary
-	Skin = 3
-	VoicePitch = 95
-End
-
-Normal Grant
-	Skin = 4
-	VoicePitch = 112
-End
-
-Normal Greg
-	Skin = 1
-	VoicePitch = 111
-End
-
-Normal+Sniper Ian
-	Skin = 3
-	VoicePitch = 115
-End
-
-Normal Jerry
-	Skin = 4
-	VoicePitch = 112
-End
-
-Normal Jon
-	Skin = 1
-	VoicePitch = 96
-End
-
-Normal Keith
-	Skin = 2
-	VoicePitch = 98
-End
-
-Normal Mark
-	Skin = 4
-	VoicePitch = 110
-End
-
-Normal Matt
-	Skin = 1
-	VoicePitch = 95
-End
-
-Normal+RifleT Mike
-	Skin = 2
 	VoicePitch = 100
-End
-
-Normal Nate
-	Skin = 4
-	VoicePitch = 99
-End
-
-Normal Paul
-	Skin = 3
-	VoicePitch = 98
-End
-
-Normal Scott
-	Skin = 1
-	VoicePitch = 105
-End
-
-Normal Steve
-	Skin = 2
-	VoicePitch = 115
-End
-
-Normal Tom
-	Skin = 3
-	VoicePitch = 110
-End
-
-Normal Yahn
-	Skin = 4
-	VoicePitch = 92
 End
 
 //----------------------------------------
 
-Fair Alfred
-	VoicePitch = 110
+Fair+Rifle "Dani Mocanu"
+	Skin = 1
+	VoicePitch = 95
 End
 
-Fair Bill
-	VoicePitch = 100
-End
-
-Fair Brandon
-	VoicePitch = 99
-End
-
-Fair+Spray Calvin
-	VoicePitch = 120
-End
-
-Fair Dean
-	VoicePitch = 111
-End
-
-Fair Dustin
-	VoicePitch = 98
-End
-
-Fair Ethan
-	VoicePitch = 112
-End
-
-Fair Harold
-	VoicePitch = 90
-End
-
-Fair Henry
-	VoicePitch = 120
-End
-
-Fair Irving
-	VoicePitch = 118
-End
-
-Fair Jason
-	VoicePitch = 116
-End
-
-Fair+Spray Jenssen
-	VoicePitch = 112
-End
-
-Fair Josh
-	VoicePitch = 114
-End
-
-Fair Martin
-	VoicePitch = 110
-End
-
-Fair Nick
-	VoicePitch = 98
-End
-
-Fair Norm
-	VoicePitch = 92
-End
-
-Fair Orin
-	VoicePitch = 113
-End
-
-Fair Pat
-	VoicePitch = 114
-End
-
-Fair Perry
-	VoicePitch = 115
-End
-
-Fair Ron
-	VoicePitch = 100
-End
-
-Fair Shawn
+Fair+Spray "Zana Zanelor"
+	Skin = 4
 	VoicePitch = 102
 End
 
-Fair Tim
+Fair+Shotgun "Fero Magneticul"
+	Skin = 1
 	VoicePitch = 98
 End
 
-Fair Will
+Fair+RifleT Armani
+	Skin = 2
 	VoicePitch = 96
 End
 
-Fair Wyatt
-	VoicePitch = 94
+Fair+Punch "Printu din Dubai"
+	Skin = 4
+	VoicePitch = 103
 End
+
+Fair+PunchT Brazilianu
+	Skin = 1
+	VoicePitch = 105
+End
+
+Fair+Rifle "Sofer BMW"
+	Skin = 2
+	VoicePitch = 97
+End
+
+Fair+Rifle "Piticul Porno"
+	Skin = 4
+	VoicePitch = 84
+End
+
+Fair+PunchT "Ai Luat Speish"
+	Skin = 1
+	VoicePitch = 90
+End
+
+Fair+Rifle "Alex Belea"
+	Skin = 2
+	VoicePitch = 98
+End
+
+Fair+Sniper "Lutza Agresorul"
+	Skin = 3
+	VoicePitch = 110
+End
+
+Fair+Spray "Dragnea"
+	Skin = 4
+	VoicePitch = 103
+End
+
+//----------------------------------------
+
+Tough+Sniper Tranca
+	Skin = 3
+	VoicePitch = 120
+End
+
+Tough+Sniper Salam
+	Skin = 1
+	VoicePitch = 95
+End
+
+Tough+Rifle Gutza
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough+Rifle Plapcea
+	Skin = 2
+	VoicePitch = 104
+End
+
+Tough+RifleT Faraonul
+	Skin = 4
+	VoicePitch = 98
+End
+
+Tough Dusmaniee
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough+Rifle SefulPapadiilor
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough+Shotgun EuSuntBombaNucleara
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough+RifleT DauCuZarul66
+	Skin = 2
+	VoicePitch = 110
+End
+
+Tough SaMoaraBibi
+	Skin = 1
+	VoicePitch = 90
+End
+
+Tough "Fernando de la Caransebes"
+	Skin = 1
+	VoicePitch = 98
+End
+
 
 //----------------------------------------
 

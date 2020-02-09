@@ -1,4 +1,4 @@
-custom.cfg
-secrets.env
-**/sourcemod/configs/admins_simple.ini
+**/secrets.env
+**/docker-compose.yml
+./csgo-override/
 

@@ -10,8 +10,16 @@ fi
 
 # manage addons
 source "$SDIR/lib/base-addons.sh"
+source "$SDIR/lib/sourcemod.sh"
 update_metamod
 update_sourcemod
+
+if [[ -n "$SM_PLUGINS_ENABLE" ]]; then
+	sm_enable $SM_PLUGINS_ENABLE
+fi
+if [[ -n "$SM_PLUGINS_DISABLE" ]]; then
+	sm_disable $SM_PLUGINS_DISABLE
+fi
 
 # update image configs
 echo "Updating server configs..."

@@ -1,15 +1,12 @@
 #!/bin/bash
-# Downloads / compiles the requested CSGO addons and stores them on the image
+# Installs MetaMod and SourceMod into the ADDONS_UPDATE_DIR
 
 set -e
 SDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 source "$SDIR/lib/base-addons.sh"
+source "$SDIR/lib/sourcemod.sh"
 
 download_metamod
 download_sourcemod
-
-ls -l "$ADDONS_UPDATE_DIR"
-
-#source "$SDIR/lib/base-addons.sh"
 

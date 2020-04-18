@@ -29,8 +29,13 @@ ENV SRCDS_FPSMAX=300 SRCDS_TICKRATE=128 SRCDS_PORT=27015 SRCDS_TV_PORT=27020 \
 	SRCDS_STARTUP_SCRIPT="+map de_dust2"
 EXPOSE 27015 27020 27005 51840
 
+ADD scripts/lib/ /opt/csgo-server/lib/
+ADD scripts/csgo-install-sourcemod.sh /opt/csgo-server/
+RUN /opt/csgo-server/csgo-install-sourcemod.sh
+
 ADD scripts/ /opt/csgo-server/
-RUN /opt/csgo-server/csgo-compile-addons.sh
+ADD addons_src/ /home/steam/sm_addons_src/
+RUN /opt/csgo-server/csgo-compile-plugins.sh
 
 ADD csgo/ /home/steam/csgo-files/ 
 

@@ -1,0 +1,43 @@
+// To use this file, rename it to GameModes_Server.txt
+// Values here override the default gamemodes.txt 
+// https://developer.valvesoftware.com/wiki/Counter-Strike:_Global_Offensive_Dedicated_Servers
+
+"GameModes_Server.txt" {
+	"gameTypes" {
+		"gungame"{ // ARMS RACE
+			"gameModes"{
+				"gungameprogressive"{
+					"mapgroupsMP"
+					{
+						"mg_armsrace"    ""
+						"mg_armsrace_custom"    ""
+					}
+				}
+			}
+		}
+	}
+	"mapgroups" {
+		"mg_armsrace_custom"
+		{
+			"imagename"              "mapgroup-armsrace"
+			"name"                   "mg_armsrace_custom"
+			"icon_image_path"        "map_icons/mapgroup_icon_armsrace"
+			"maps"
+			{
+				"de_lake"			""
+				"de_stmarc"			""
+				"de_safehouse"		""
+				"de_dust2"          ""
+				"ar_shoots"			""
+				"ar_lunacy"			""
+				"ar_monastery"		""
+				"ar_baggage"		""
+				"workshop\540889065\fy_snow"  ""
+				"workshop\314605843\de_16fighters_go"  ""
+				"workshop\607914574\aim_lidl"  ""
+				"workshop\133719892\de_cyberwar"  ""
+			}
+		}
+	}
+}
+

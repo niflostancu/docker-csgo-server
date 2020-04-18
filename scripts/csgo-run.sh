@@ -12,7 +12,7 @@ SDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # start the dedicated server
 cd "$CSGO_DIR"
-ln -s /home/steam/steamcmd/steamcmd.sh /home/steam/steamcmd/steam.sh
+ln -sf /home/steam/steamcmd/steamcmd.sh /home/steam/steamcmd/steam.sh
 exec "$CSGO_DIR"/srcds_run \
 	-game csgo -console -autoupdate \
 	-steam_dir /home/steam/steamcmd/ \

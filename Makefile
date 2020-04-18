@@ -23,5 +23,10 @@ run:
 		-e "PUID=$$(id -u)" -e PGID=$$(id -g) \
 		$(FULL_IMAGE_NAME):latest
 
+run_shell:
+	docker run -it --rm --name $(IMAGE_NAME)-run --hostname=$(IMAGE_NAME) \
+		-e "PUID=$$(id -u)" -e PGID=$$(id -g) \
+		$(FULL_IMAGE_NAME):latest bash
+
 .PHONY: build build_force push run
 

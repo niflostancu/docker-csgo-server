@@ -1,4 +1,4 @@
 **/secrets.env
-**/docker-compose.yml
+docker-compose.yml
 ./csgo-override/
 

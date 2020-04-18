@@ -5,8 +5,19 @@ services:
     network_mode: "host"
     volumes:
      - game:/home/steam/csgo-dedicated
-    env_file: 
+     - ./overrides:/home/steam/csgo-overrides:ro
+    env_file:
      - secrets.env
+
+  # if you also want a webserver for your game data...
+  web:
+    image: nginx
+    ports:
+      - "27080:80"
+    volumes:
+      - ./data/csgo:/usr/share/nginx/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
 volumes:
   game:
     driver: local

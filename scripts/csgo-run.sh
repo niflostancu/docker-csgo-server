@@ -1,19 +1,14 @@
 #!/bin/bash
 # CSGO Dedicated Server run script
 
+set -e
+SDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 # First, run the upgrade script
-csgo-update.sh
+"$SDIR/csgo-update.sh"
 
 # update the addons
-csgo-update-addons.sh
-
-# update config
-rsync -avh /home/steam/csgo-files/ "$CSGO_DIR"/csgo/
-rsync -avh /home/steam/csgo-override/ "$CSGO_DIR"/csgo/
-
-if [[ -n "$STEAM_API_KEY" ]]; then
-	echo "$STEAM_API_KEY" > "$CSGO_DIR/csgo/webapi_authkey.txt"
-fi
+"$SDIR/csgo-update-config.sh"
 
 # start the dedicated server
 cd "$CSGO_DIR"
@@ -26,4 +21,5 @@ exec "$CSGO_DIR"/srcds_run \
 	-tv_port $SRCDS_TV_PORT -maxplayers_override $SRCDS_MAXPLAYERS -nomaster \
 	+sv_setsteamaccount $SRCDS_TOKEN -net_port_try 1 \
 	+rcon_password $SRCDS_RCONPW +sv_password $SRCDS_PW +sv_region $SRCDS_REGION \
+	$SRCDS_STARTUP_SCRIPT
 

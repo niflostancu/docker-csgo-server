@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 VALIDATE=validate
 if [[ -d "$CSGO_DIR/csgo" ]]; then
 	VALIDATE=

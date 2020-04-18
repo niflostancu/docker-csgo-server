@@ -1,22 +1,15 @@
 #!/bin/bash
-# Downloads the CSGO addons for installation and stores them into the server
-
-ADDONS=(
-	"https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz"
-	"https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6461-linux.tar.gz"
-)
+# Downloads / compiles the requested CSGO addons and stores them on the image
 
 set -e
+SDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-mkdir -p /home/steam/csgo-addons
-mkdir -p /tmp/addon-archives
-cd /home/steam/csgo-addons
+source "$SDIR/lib/base-addons.sh"
 
-for url in "${ADDONS[@]}"; do
-	name=${url##*/}
-	curl -o "/tmp/addon-archives/$name" "$url"
-	tar xf "/tmp/addon-archives/$name"
-done
+download_metamod
+download_sourcemod
 
-rm -rf /tmp/addon-archives
+ls -l "$ADDONS_UPDATE_DIR"
+
+#source "$SDIR/lib/base-addons.sh"
 

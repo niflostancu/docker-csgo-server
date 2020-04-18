@@ -26,13 +26,13 @@ ENV SRCDS_FPSMAX=300 SRCDS_TICKRATE=128 SRCDS_PORT=27015 SRCDS_TV_PORT=27020 \
 	SRCDS_MAXPLAYERS=14 SRCDS_TOKEN=0 \
 	SRCDS_RCONPW="changeme" SRCDS_PW="changeme" \
 	CSGO_DIR="/home/steam/csgo-dedicated" \
-	SRCDS_STARTUP_CMDS="+game_type 1 +game_mode 0 +mapgroup mg_armsrace_custom +map de_lake"
+	SRCDS_STARTUP_SCRIPT="+map de_dust2"
 EXPOSE 27015 27020 27005 51840
 
-ADD scripts/ /usr/local/bin
-RUN /usr/local/bin/csgo-compile-addons.sh
+ADD scripts/ /opt/csgo-server/
+RUN /opt/csgo-server/csgo-compile-addons.sh
 
 ADD csgo/ /home/steam/csgo-files/ 
 
-CMD /usr/local/bin/csgo-run.sh
+CMD /opt/csgo-server/csgo-run.sh
 

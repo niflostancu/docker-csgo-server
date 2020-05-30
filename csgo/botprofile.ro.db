@@ -231,7 +231,7 @@ Elite+Power Surpateanu
 	VoicePitch = 110
 End
 
-Elite+RifleT Cristiana
+Elite+RifleT Boicea
 	Skin = 4
 	VoicePitch = 100
 End
@@ -341,7 +341,7 @@ VeryHard "Tzigan"
 	VoicePitch = 77
 End
 
-VeryHard+RifleT Cristiana
+VeryHard+RifleT Boicea
 	Skin = 4
 	VoicePitch = 100
 End
@@ -492,7 +492,7 @@ Normal "Tzigan"
 	VoicePitch = 77
 End
 
-Normal+RifleT Cristiana
+Normal+RifleT Boicea
 	Skin = 4
 	VoicePitch = 100
 End

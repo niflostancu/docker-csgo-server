@@ -1,6 +1,9 @@
 #pragma semicolon 1
 
 #include <sourcemod>
+#include <sdktools>
+#include <sdkhooks>
+
 
 // Global Definitions
 #define PLUGIN_VERSION "1.0.0"
@@ -121,10 +124,61 @@ public void PlayerSpawn(Event event, const char[] name, bool dontBroadcast)
 	
 	if (!g_kvPlayers.JumpToKey(auth)) {
 		g_kvPlayers.Rewind();
-        return;
-    }
-	SetEntityHealth(client, g_kvPlayers.GetNum("health", 1));
+		return;
+	}
+	SetEntityHealth(client, g_kvPlayers.GetNum("health", 100));
 	g_kvPlayers.Rewind();
 }
 
+public int GetDefaultHealth(client)
+{
+	new String:auth[64];
+	new nHealth;
+	GetClientAuthId(client, AuthId_Steam2, auth, sizeof(auth), true);
+	
+	if (!g_kvPlayers.JumpToKey(auth)) {
+		g_kvPlayers.Rewind();
+		return 100;
+	}
+	nHealth = g_kvPlayers.GetNum("health", 100);
+	g_kvPlayers.Rewind();
+	return nHealth;
+}
+
+public OnClientPutInServer(client)
+{
+	SDKHook(client, SDKHook_OnTakeDamage, TakeDamageCallback);
+}
+
+public Action:TakeDamageCallback(victim, &attacker, &inflictor, &Float:damage, &damagetype)
+{
+	new String:Weapon[32];
+	
+	if (inflictor > 0 && inflictor <= MaxClients)
+	{
+		new weapon = GetEntPropEnt(inflictor, Prop_Send, "m_hActiveWeapon");
+		GetEdictClassname(weapon, Weapon, 32);
+	}
+	
+	if (StrContains(Weapon, "knife") == -1 || !IsValidClient(attacker) || !IsValidClient(victim))
+	{
+		return Plugin_Continue;
+	}
+	
+	float nHealth = float(GetDefaultHealth(victim));
+	damage = damage / 100.0 * nHealth;
+	LogAction(attacker, victim, "\"%L\" damaged \"%L\" with knife: %f (health %f)", attacker, victim, damage, nHealth);
+	
+	return Plugin_Changed;
+}
+
+stock bool:IsValidClient(client, bool:bAlive = false)
+{
+	if(client >= 1 && client <= MaxClients && IsClientConnected(client) && IsClientInGame(client) && (bAlive == false || IsPlayerAlive(client)))
+	{
+		return true;
+	}
+	
+	return false;
+}
 

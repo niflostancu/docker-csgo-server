@@ -3,7 +3,7 @@
 
 # Update the URLs
 METAMOD_URL="https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz"
-SOURCEMOD_URL="https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6482-linux.tar.gz"
+SOURCEMOD_URL="https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6492-linux.tar.gz"
 
 ADDONS_TMP=/tmp/csgo-addons
 ADDONS_UPDATE_DIR=/home/steam/csgo-addons
